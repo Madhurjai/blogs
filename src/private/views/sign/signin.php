@@ -28,6 +28,9 @@
           font-size: 3.5rem;
         }
       }
+      strong{
+        color: red;
+      }
     </style>
 
     
@@ -55,6 +58,9 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+  </br>
+    <strong><?php if (isset($data['err'])) { echo $data['err'] ; } ?></strong>
+    <strong><?php if (isset($data['res'])) { echo $data['res'] ; } ?></strong>
     <p class="mt-5 mb-3 text-muted">&copy; CEDCOSS Technologies</p>
   </form>
 </main>
