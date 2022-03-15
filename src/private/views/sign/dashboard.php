@@ -51,7 +51,7 @@
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="http://localhost:8080/public/admin/signout">Sign out</a>
     </div>
   </div>
 </header>
@@ -154,7 +154,7 @@
               
             }
             echo $html ;
-
+            if(isset($data['count'])) {
             $con = $data['count'] ;
             $no_page = ceil($con/$limit) ;
             
@@ -164,6 +164,7 @@
             }
              $tab .= '</ul>' ;
              echo $tab ;
+          }
               ?>
           </tbody>
         </table>

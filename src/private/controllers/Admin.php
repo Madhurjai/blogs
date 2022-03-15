@@ -62,7 +62,10 @@ class Admin extends Controller
                 // print_r($err);
                 $this->view('sign/signin', $data);
         } else {
-            $this->view('home');
+            session_start();
+            $data['blogs'] = $this->model('Blog')::all() ;
+            // print_r($data['blogs']);
+            $this->view('home', $data);
         } 
     }
 
@@ -172,12 +175,15 @@ class Admin extends Controller
             // print_r($data['blogs']);
             if (count($data['blogs']) >0) {
                 $this->view('blogs/products', $data);
-            } elseif (count($data['blogs']) == 0) {
+            } else {
                 $data['err'] = "data not found !!" ;
-                $this->view('blogs/products', $data);
+                $this->total_blogs();
             }
-        } else {
-            $this->total_blogs();
         }
+    }
+    public function signout() {
+        $data['ses'] = "session destroy" ;
+        $this->view('sign/signin',$data);
+        // session_destroy();
     }
 }

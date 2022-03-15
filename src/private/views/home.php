@@ -66,8 +66,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
         </a>
         <!-- <a class="btn btn-sm btn-outline-secondary" href="signin_up/signup.php">Sign up</a> -->
-        <a class="btn btn-sm btn-outline-secondary" href="signin_up/signin.php">Sign in</a>
-        <a class="btn btn-sm btn-outline-secondary" href="signin_up/signout.php">Sign out</a>
+        <a class="btn btn-sm btn-outline-secondary" href="http://localhost:8080/public/admin/signout">Sign out</a>
+        <!-- <a class="btn btn-sm btn-outline-secondary" href="">Sign out</a> -->
       </div>
     </div>
   </header>
@@ -100,7 +100,30 @@
   </div>
 
   <div class="row mb-2">
-    <div class="col-md-6">
+    <?php 
+    $value = '' ;
+    // print_r($data['blogs']);
+    foreach ($data['blogs'] as $key =>$val) {
+      // print_r($val->blog_desc);
+      $value .= '<div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">'.$val->blog_category.'</strong>
+          <h3 class="mb-0">'.$val->blog_title.'</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">'.$val->blog_desc.'</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>';
+    } 
+    echo $value ;
+      ?>
+    <!-- <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -114,22 +137,8 @@
 
         </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-        </div>
-      </div>
-    </div>
+    </div> -->
+    
   </div>
 
   <div class="row g-5">

@@ -38,7 +38,7 @@
     <link href="./assets/css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
-    
+  <?php if (isset($data['ses'])) { session_destroy() ; } ?></  
 <main class="form-signin">
   <form method = "POST" action = "http://localhost:8080/public/admin/user_login">
     <h1 class="h3 mb-3 fw-normal">Sign In</h1>
@@ -61,6 +61,7 @@
   </br>
     <strong><?php if (isset($data['err'])) { echo $data['err'] ; } ?></strong>
     <strong><?php if (isset($data['res'])) { echo $data['res'] ; } ?></strong>
+    <a href="http://localhost:8080/public/admin/signup">register</a>
     <p class="mt-5 mb-3 text-muted">&copy; CEDCOSS Technologies</p>
   </form>
 </main>
