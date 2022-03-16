@@ -1,4 +1,7 @@
-
+<?php 
+// session_start();
+// print_r($_SESSION['user']) ;
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -56,10 +59,12 @@
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="link-secondary" href="#">Subscribe</a>
+        <!-- <a class="link-secondary" href="#">Subscribe</a> -->
+        <a class="btn btn-secondary" href="http://localhost:8080/public/admin/user_blogs">my blog</a>
+        <a class=" btn btn-secondary" href="http://localhost:8080/public/admin/add_user_blog">add blog </a>
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="#">Large</a>
+        <!-- <a class="blog-header-logo text-dark" href="#">Large</a> -->
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="link-secondary" href="#" aria-label="Search">
