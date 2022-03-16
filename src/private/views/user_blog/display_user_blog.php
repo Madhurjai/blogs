@@ -46,7 +46,7 @@
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="http://localhost:8080/public/admin/sign_out">Sign out</a>
+      <!-- <a class="nav-link px-3" href="http://localhost:8080/public/admin/sign_out">Sign out</a> -->
     </div>
   </div>
 </header>
@@ -57,29 +57,11 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://localhost:8080/public/admin/home">
+            <a class="nav-link active " aria-current="page"  href="http://localhost:8080/public/admin/home">
               <span data-feather="home"></span>
               home
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
+         
         </ul>
       </div>
     </nav>
