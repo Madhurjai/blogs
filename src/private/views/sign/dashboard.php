@@ -67,24 +67,14 @@
               Dashboard
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="http://localhost:8080/public/admin/blogs">
               <span data-feather="shopping-cart"></span>
               blog
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
+          
         </ul>
       </div>
     </nav>
